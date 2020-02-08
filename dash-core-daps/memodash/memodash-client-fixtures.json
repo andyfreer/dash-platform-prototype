@@ -1,0 +1,26 @@
+{
+  "alice_subtx_1": {
+    "subtx": {
+      "pver": 1,
+      "action": 1,
+      "uname": "alice",
+      "pubkey": "024964f06ea5cfec1890d7e526653b083c12360f79164c1e8163327d0849fa7bca",
+      "meta": {
+        "id": "2d30902738f48f6f927a296bfbf058f1e09ebb201ca3c1a6c462f2bb2ee05705",
+        "sig": "INxlyf9JX8j1hfcBNf5W72+UALu7+5nF8l/MfUZSJlomNDkmwWfvva4eE4/tjJPUO+ByV6K3cbUgPhjbEZIM8Ik="
+      }
+    }
+  },
+  "bob_subtx_1": {
+    "subtx": {
+      "pver": 1,
+      "action": 1,
+      "uname": "bob",
+      "pubkey": "0261f767fb9c0bad4ea5425dbb618522ae4ea186beb37fb1b0666c59a5acd05b93",
+      "meta": {
+        "id": "76b19e926e6ea960ce19a9ba7db205b3c5f05c178240348e4236abb821e9c261",
+        "sig": "H3bcSB3TkT/GOC6dFsZ1eS3R3k0RR53DEBcytscUovXbBW2Crys+q4Y1EgbqtttduEnYs8sUcymhLZXh/bk5DBs="
+      }
+    }
+  }
+}

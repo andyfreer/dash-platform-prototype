@@ -1,0 +1,25 @@
+{
+  "$id": "http://dash.org/schema/dap",
+  "title": "HellowWorld",
+  "someobject": {
+    "type": "object",
+    "allOf": [
+      {
+        "$ref": "http://dash.org/schemas/sys#/definitions/dapobjectbase"
+      }
+    ],
+    "properties": {
+      "helloworld": {
+        "type": "string"
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "required": [
+        "someobject"
+      ]
+    }
+  ],
+  "additionalProperties": false
+}

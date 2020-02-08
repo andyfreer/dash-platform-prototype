@@ -1,0 +1,18 @@
+language: node_js
+dist: trusty
+sudo: required
+node_js:
+  - 'node'
+
+addons:
+  chrome: stable
+before_install:
+  # Needed for Karma test runner
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3 # give xvfb some time to start
+install:
+  - npm install
+
+script:
+  - npm run build

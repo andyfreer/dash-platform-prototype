@@ -1,0 +1,376 @@
+{
+    "alice_subtx_1": {
+        "subtx": {
+            "pver": 1,
+            "action": 1,
+            "uname": "alice",
+            "pubkey": "024964f06ea5cfec1890d7e526653b083c12360f79164c1e8163327d0849fa7bca",
+            "meta": {
+                "id": "2d30902738f48f6f927a296bfbf058f1e09ebb201ca3c1a6c462f2bb2ee05705",
+                "sig": "INxlyf9JX8j1hfcBNf5W72+UALu7+5nF8l/MfUZSJlomNDkmwWfvva4eE4/tjJPUO+ByV6K3cbUgPhjbEZIM8Ik="
+            }
+        }
+    },
+    "bob_subtx_1": {
+        "subtx": {
+            "pver": 1,
+            "action": 1,
+            "uname": "bob",
+            "pubkey": "0261f767fb9c0bad4ea5425dbb618522ae4ea186beb37fb1b0666c59a5acd05b93",
+            "meta": {
+                "id": "76b19e926e6ea960ce19a9ba7db205b3c5f05c178240348e4236abb821e9c261",
+                "sig": "H3bcSB3TkT/GOC6dFsZ1eS3R3k0RR53DEBcytscUovXbBW2Crys+q4Y1EgbqtttduEnYs8sUcymhLZXh/bk5DBs="
+            }
+        }
+    },
+    "charlie_subtx_1": {
+        "subtx": {
+            "pver": 1,
+            "action": 1,
+            "uname": "charlie",
+            "pubkey": "02eba6dc8646c71dc354b0e6dd3424dac8d67f186a6d5a5f854901eb06f1f908e7",
+            "meta": {
+                "id": "6376a882c0108b49f8c3474c892d03a386fc8aec15d5c2a735ff26944586a410",
+                "sig": "HyKamyeif96eePK+Nuvq3K8PIt9V2na9Z0z9yMfQRvgXafk56mKSLswCjPkkyWe+zCh5BtU+rNxHm1Y0FEEpFaE="
+            }
+        }
+    },
+    "dashpay_dap": {
+        "dapcontract": {
+            "debug": "valid registration of a new DAP on the chain",
+            "pver": 0,
+            "idx": 0,
+            "dapid": 0,
+            "dapname": "DashPay",
+            "dapver": "1",
+            "dapschema": {
+                "$id": "http://dash.org/schemas/sys/dapschema",
+                "title": "Contacts",
+                "user": {
+                    "$id": "http://dash.org/schemas/sys/dapobject",
+                    "allOf": [
+                        {
+                            "$ref": "http://dash.org/schemas/sys#/definitions/dapobjectbase"
+                        }
+                    ],
+                    "primaryKey": {
+                        "composite": true
+                    },
+                    "properties": {
+                        "aboutme": {
+                            "type": "string"
+                        },
+                        "avatar": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "contact": {
+                    "$id": "http://dash.org/schemas/sys/dapobject",
+                    "allOf": [
+                        {
+                            "$ref": "http://dash.org/schemas/sys#/definitions/dapobjectbase"
+                        }
+                    ],
+                    "primaryKey": {
+                        "composite": true,
+                        "includes": [
+                            "toUser"
+                        ]
+                    },
+                    "properties": {
+                        "hdextpubkey": {
+                            "type": "string"
+                        },
+                        "toUser": {
+                            "$ref": "http://dash.org/schemas/sys#/definitions/relation"
+                        },
+                        "pub": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "hdextpubkey",
+                        "toUser"
+                    ]
+                }
+            },
+            "meta": {
+                "id": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980"
+            }
+        }
+    },
+    "alice_stpacket_0": {
+        "stpacket": {
+            "pver": 1,
+            "dapid": 1,
+            "dapname": "DashPay",
+            "dapcontract": {
+                "debug": "valid registration of a new DAP on the chain",
+                "pver": 0,
+                "idx": 0,
+                "dapid": 0,
+                "dapname": "DashPay",
+                "dapver": "1",
+                "dapschema": {
+                    "$id": "http://dash.org/schemas/sys/dapschema",
+                    "title": "Contacts",
+                    "user": {
+                        "$id": "http://dash.org/schemas/sys/dapobject",
+                        "allOf": [
+                            {
+                                "$ref": "http://dash.org/schemas/sys#/definitions/dapobjectbase"
+                            }
+                        ],
+                        "primaryKey": {
+                            "composite": true
+                        },
+                        "properties": {
+                            "aboutme": {
+                                "type": "string"
+                            },
+                            "avatar": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "contact": {
+                        "$id": "http://dash.org/schemas/sys/dapobject",
+                        "allOf": [
+                            {
+                                "$ref": "http://dash.org/schemas/sys#/definitions/dapobjectbase"
+                            }
+                        ],
+                        "primaryKey": {
+                            "composite": true,
+                            "includes": [
+                                "toUser"
+                            ]
+                        },
+                        "properties": {
+                            "hdextpubkey": {
+                                "type": "string"
+                            },
+                            "toUser": {
+                                "$ref": "http://dash.org/schemas/sys#/definitions/relation"
+                            },
+                            "pub": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "hdextpubkey",
+                            "toUser"
+                        ]
+                    }
+                },
+                "meta": {
+                    "id": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980"
+                }
+            },
+            "meta": {
+                "id": "dac5bd68bbeffed00dd350c5bc9bcd6e3d6fd0e3787cee50cec1cf5f64901187"
+            }
+        }
+    },
+    "alice_stheader_0": {
+        "stheader": {
+            "pver": 1,
+            "fee": 0,
+            "uid": "2d30902738f48f6f927a296bfbf058f1e09ebb201ca3c1a6c462f2bb2ee05705",
+            "ptsid": "",
+            "pakid": "dac5bd68bbeffed00dd350c5bc9bcd6e3d6fd0e3787cee50cec1cf5f64901187",
+            "usig": "",
+            "qsig": "",
+            "meta": {
+                "id": "e1153d78fb79a6520e8654c575c9e31e095e843923c7a2c64b013042d46f5ee6"
+            }
+        }
+    },
+    "alice_dashpay_user": {
+        "objtype": "user",
+        "debug": "valid dashpay blockchainuser for alice",
+        "rev": 1,
+        "act": 1,
+        "id": "fe260409408d2999507b227fd157b2f17fd03fd9"
+    },
+    "alice_stpacket_1": {
+        "stpacket": {
+            "debug": "alice_stpacket_1: valid transition packet containing Alice's DashPay DAPUser signup for L2 storage",
+            "pver": 1,
+            "dapid": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980",
+            "dapobjmerkleroot": "089b87cb87f9247c9dd79a11d790bc68533820febb53630a60d526569c8eed5b",
+            "dapobjects": [
+                {
+                    "objtype": "user",
+                    "debug": "valid dashpay blockchainuser for alice",
+                    "rev": 1,
+                    "act": 1,
+                    "id": "fe260409408d2999507b227fd157b2f17fd03fd9"
+                }
+            ],
+            "meta": {
+                "id": "d69f5853a38e30816b8ed8bc384f8bef5a21573b9236d58f3a62f3f7c54af518"
+            }
+        }
+    },
+    "alice_stheader_1": {
+        "stheader": {
+            "pver": 1,
+            "fee": 0,
+            "uid": "2d30902738f48f6f927a296bfbf058f1e09ebb201ca3c1a6c462f2bb2ee05705",
+            "ptsid": "e1153d78fb79a6520e8654c575c9e31e095e843923c7a2c64b013042d46f5ee6",
+            "pakid": "d69f5853a38e30816b8ed8bc384f8bef5a21573b9236d58f3a62f3f7c54af518",
+            "usig": "",
+            "qsig": "",
+            "meta": {
+                "id": "74d28ac59abe00fc4fee0b5ad295c347da35e623646ae76cec079b9dce84067f"
+            }
+        }
+    },
+    "alice_contact_1": {
+        "objtype": "contact",
+        "pver": 1,
+        "rev": 0,
+        "act": 1,
+        "toUser": {
+            "userId": "76b19e926e6ea960ce19a9ba7db205b3c5f05c178240348e4236abb821e9c261"
+        },
+        "hdextpubkey": "xpub6A9c92Lqxd2Y4bhq91YcWoE2BbUWSBKur1MjeMjkMkEKL7orgkD4k45a3rRq2o5cSk48wDb8SE7iAGbpjSCskrk6R7tSqEJ86nRfLr3Jifa",
+        "agreetscs": 1,
+        "id": "ff0ad60cf7bf5c16a8418a049c7a3655de957757"
+    },
+    "alice_stpacket_2": {
+        "stpacket": {
+            "pver": 1,
+            "dapid": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980",
+            "dapobjmerkleroot": "6f6ae26bddbef88339490168e5ab889266c6a7e14cb61a0aa9e3bfd91b3fb543",
+            "dapobjects": [
+                {
+                    "objtype": "contact",
+                    "pver": 1,
+                    "rev": 0,
+                    "act": 1,
+                    "toUser": {
+                        "userId": "76b19e926e6ea960ce19a9ba7db205b3c5f05c178240348e4236abb821e9c261"
+                    },
+                    "hdextpubkey": "xpub6A9c92Lqxd2Y4bhq91YcWoE2BbUWSBKur1MjeMjkMkEKL7orgkD4k45a3rRq2o5cSk48wDb8SE7iAGbpjSCskrk6R7tSqEJ86nRfLr3Jifa",
+                    "agreetscs": 1,
+                    "id": "ff0ad60cf7bf5c16a8418a049c7a3655de957757"
+                }
+            ],
+            "meta": {
+                "id": "b2048418934f12d44b57c4627db9c9e6b15139f8a0ecc566e5f2219fbe221d71"
+            }
+        }
+    },
+    "alice_stheader_2": {
+        "stheader": {
+            "pver": 1,
+            "fee": 1,
+            "uid": "2d30902738f48f6f927a296bfbf058f1e09ebb201ca3c1a6c462f2bb2ee05705",
+            "ptsid": "74d28ac59abe00fc4fee0b5ad295c347da35e623646ae76cec079b9dce84067f",
+            "pakid": "b2048418934f12d44b57c4627db9c9e6b15139f8a0ecc566e5f2219fbe221d71",
+            "usig": "1",
+            "qsig": "1",
+            "meta": {
+                "id": "7e135b5f576078c9140c9abb5e6c9d7d3ae5c9beb5d711df55f6477eeee3df19"
+            }
+        }
+    },
+    "bob_dashpay_user": {
+        "objtype": "user",
+        "dapid": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980",
+        "rev": 0,
+        "act": 1,
+        "agreetscs": 1,
+        "id": "dfab8152a3847a54e059a70d8d1f54c00b4171e6"
+    },
+    "bob_stpacket_0": {
+        "stpacket": {
+            "pver": 1,
+            "dapid": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980",
+            "dapobjmerkleroot": "81d0e20d95dd74a761c3cb521e6ac8f7c05e29b5c7dfcc5276e32c243dc52a9d",
+            "dapobjects": [
+                {
+                    "objtype": "user",
+                    "dapid": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980",
+                    "rev": 0,
+                    "act": 1,
+                    "agreetscs": 1,
+                    "id": "dfab8152a3847a54e059a70d8d1f54c00b4171e6"
+                }
+            ],
+            "meta": {
+                "id": "1fe129ca99cf5568d92e45219967adaf7769f5c558e157c72406747457b16a61"
+            }
+        }
+    },
+    "bob_transition_0": {
+        "stheader": {
+            "pver": 1,
+            "fee": 0,
+            "uid": "76b19e926e6ea960ce19a9ba7db205b3c5f05c178240348e4236abb821e9c261",
+            "ptsid": "",
+            "pakid": "1fe129ca99cf5568d92e45219967adaf7769f5c558e157c72406747457b16a61",
+            "usig": "",
+            "qsig": "",
+            "meta": {
+                "id": "4baef47b3a0daee60faa7b917ae75516dcad0d9950854031b01b0abcf546670d"
+            }
+        }
+    },
+    "bob_contact_1": {
+        "objtype": "contact",
+        "pver": 1,
+        "dapid": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980",
+        "rev": 0,
+        "act": 1,
+        "toUser": {
+            "userId": "2d30902738f48f6f927a296bfbf058f1e09ebb201ca3c1a6c462f2bb2ee05705"
+        },
+        "hdextpubkey": "xpub6AssZYzgSswgh3fHbC1f9uHfYbqcsc8n7XQrq3LcCBWnPE5VxxmmJJHcDXpBqS8MZKzMqVWVTPDJ2AC1HSFXx59MfaNhkYqi7ZdgCgfjZ35",
+        "agreetscs": 1,
+        "id": "f81e8abde7971188e3d1252c6d5869de48b7dbaf"
+    },
+    "bob_stpacket_1": {
+        "stpacket": {
+            "debug": "valid transition packet containing Bob's Contact response to Alice in his DashPay DAP space",
+            "pver": 1,
+            "dapid": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980",
+            "dapobjmerkleroot": "90bec91d79de1ae77e9448e759bdba209aadb46575cfe38f7a7fef482a07eb98",
+            "dapobjects": [
+                {
+                    "objtype": "contact",
+                    "pver": 1,
+                    "dapid": "514f26bb8e819c89c5479fb4b10160daaa9a9f2d5e4d2eaad4716f80f644c980",
+                    "rev": 0,
+                    "act": 1,
+                    "toUser": {
+                        "userId": "2d30902738f48f6f927a296bfbf058f1e09ebb201ca3c1a6c462f2bb2ee05705"
+                    },
+                    "hdextpubkey": "xpub6AssZYzgSswgh3fHbC1f9uHfYbqcsc8n7XQrq3LcCBWnPE5VxxmmJJHcDXpBqS8MZKzMqVWVTPDJ2AC1HSFXx59MfaNhkYqi7ZdgCgfjZ35",
+                    "agreetscs": 1,
+                    "id": "f81e8abde7971188e3d1252c6d5869de48b7dbaf"
+                }
+            ],
+            "meta": {
+                "id": "3a5b987192ac491679d473e53f615634d8cfa21e2ba45d0e3dfe8df9431030dc"
+            }
+        }
+    },
+    "bob_transition_1": {
+        "stheader": {
+            "pver": 1,
+            "fee": 1,
+            "uid": "76b19e926e6ea960ce19a9ba7db205b3c5f05c178240348e4236abb821e9c261",
+            "ptsid": "4baef47b3a0daee60faa7b917ae75516dcad0d9950854031b01b0abcf546670d",
+            "pakid": "3a5b987192ac491679d473e53f615634d8cfa21e2ba45d0e3dfe8df9431030dc",
+            "usig": "1",
+            "qsig": "1",
+            "meta": {
+                "id": "a7ef9f19fa6def3b36572033c68d2df1849a5e9295dc1e344ccb0c2826046d06"
+            }
+        }
+    }
+}
