@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/dashevo/dash-schema",
   "dependencies": {
-    "@dashevo/dashcore-lib": "github:dashevo/dashcore-lib#develop",
+    "@dashevo/dashcore-lib": "github:dashevo/dashcore-lib",
     "ajv": "^6.5.1",
     "bson-objectid": "^1.2.3",
     "cbor": "^4.1.0",
